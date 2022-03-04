@@ -1,6 +1,12 @@
-console.log("main.js carregado com sucesso!!!");
-if(navigator.serviceWorker){
-    console.log("Esse navegador possui um suporte a pwa")
-} else{
-    console.log("Esse navegador NÃO possui suporte pwa")
+if ('serviceWorker' in navigator) {
+    console.log("main.js => Vamos registrar o service worker!!!");
+    navigator.serviceWorker.register('/service-worker-minimum-to-intall-pwa.js')
+        .then(registration => {
+            console.log("main.js => Service Worker Registrado com Sucesso");
+            console.dir(registration);
+        })
+        .catch(error => {
+            console.log("main.js => Erro ao registrar Service Worker");
+            console.dir(error);
+        });
 }
