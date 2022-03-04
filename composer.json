@@ -1,7 +1,8 @@
 {
-  "require" : {
-  },
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-  }
+  "name": "deidpwa",
+  "short_name": "AprendPWA",
+  "description": "WEB APP para aprender PWA (Disciplina PAMII).",
+  "display": "fullscreen",
+  "start_url":"index.html",    
+  "scope": "/"
 }
