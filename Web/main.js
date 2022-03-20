@@ -1,12 +1,9 @@
 if ('serviceWorker' in navigator) {
-    console.log("main.js => Vamos registrar o service worker!!!");
-    navigator.serviceWorker.register('/service-worker-minimum-to-intall-pwa.js')
-        .then(registration => {
-            console.log("main.js => Service Worker Registrado com Sucesso");
-            console.dir(registration);
+    navigator.serviceWorker.register('/js/service-worker-minimum-to-intall-pwa.js')
+        .then(function(registration) {
+            alert('Registration successful, scope is:', registration.scope);
         })
-        .catch(error => {
-            console.log("main.js => Erro ao registrar Service Worker");
-            console.dir(error);
+        .catch(function(error) {
+            alert('Service worker registration failed, error:', error);
         });
 }
