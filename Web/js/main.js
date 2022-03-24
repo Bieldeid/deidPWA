@@ -1,9 +1,9 @@
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/js/service-worker.js')
         .then(function(registration) {
-            alert('Registration successful, scope is:', registration.scope);
+            alert('Registrado com sucesso', registration.scope);
         })
         .catch(function(error) {
-            alert('Service worker registration failed, error:', error);
+            alert('Erro ao registrar service worker', error);
         });
 }
